@@ -1,5 +1,7 @@
 FROM alpine:3.5
 
+LABEL maintainer "rimelek@rimelek.hu"
+
 RUN apk update && apk add openssh-client \
  && echo -e 'Host *\nUseRoaming no' >> /etc/ssh/ssh_config
 
