@@ -80,7 +80,7 @@ for REMOTE in ${TUNNEL_REMOTES}; do
     if [ ${LOOP_i} -gt 1 ]; then
        TUNNEL_BG=' -f '
     fi
-    TUNNEL_CMD='ssh '${TUNNEL_BG}' -oStrictHostKeyChecking=no -L '${PORT_i}':127.0.0.1:'${REMOTE_TARGET_PORT}' '${REMOTE_USER}'@127.0.0.01 -p '${TUNNEL_PORT}' -N'
+    TUNNEL_CMD='ssh '${TUNNEL_BG}' -oStrictHostKeyChecking=no -L '${PORT_i}':127.0.0.1:'${REMOTE_TARGET_PORT}' '${REMOTE_USER}'@127.0.0.1 -p '${TUNNEL_PORT}' -N'
     echo ${TUNNEL_CMD}
     ${TUNNEL_CMD}
 
